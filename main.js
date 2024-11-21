@@ -1,25 +1,61 @@
-// Mobile Menu Toggle
-const mobileMenu = document.getElementById('mobileMenu');
-const navLinks = document.getElementById('navLinks');
-
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    
-    // Animate hamburger to X
-    mobileMenu.classList.toggle('active');
-    const spans = mobileMenu.getElementsByTagName('span');
-    if (mobileMenu.classList.contains('active')) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-    } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-    }
+// Loading Screen Animation
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+        document.getElementById('loading-screen').style.opacity = '0';
+        document.getElementById('main-content').classList.remove('hidden');
+        setTimeout(() => {
+            document.getElementById('loading-screen').style.display = 'none';
+        }, 1000);
+    }, 3000);
 });
 
-// Smooth Scroll for Navigation Links
+// Hero Section Animation
+const hero = document.getElementById('hero');
+const heroAnimation = document.getElementById('hero-animation');
+
+hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    
+    heroAnimation.style.setProperty('--mouse-x', `${x}%`);
+    heroAnimation.style.setProperty('--mouse-y', `${y}%`);
+});
+
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const item = question.parentElement;
+        document.querySelectorAll('.faq-item').forEach(faqItem => {
+            if (faqItem !== item) {
+                faqItem.classList.remove('active');
+            }
+        });
+        item.classList.toggle('active');
+    });
+});
+
+// Footer Animation
+const footer = document.querySelector('.footer');
+
+footer.addEventListener('mousemove', (e) => {
+    const rect = footer.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    
+    footer.style.setProperty('--mouse-x', `${x}%`);
+    footer.style.setProperty('--mouse-y', `${y}%`);
+});
+
+// Contact Form Submission
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    // Add your form submission logic here
+    alert('Message sent successfully!');
+    e.target.reset();
+});
+
+// Smooth Scrolling for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -29,12 +65,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar Background Change on Scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.9)';
-    }
+
+// Initialize Lucide icons
+document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+    
+    // Previous loading screen code
+    setTimeout(() => {
+        document.getElementById('loading-screen').style.opacity = '0';
+        document.getElementById('main-content').classList.remove('hidden');
+        setTimeout(() => {
+            document.getElementById('loading-screen').style.display = 'none';
+        }, 1000);
+    }, 3000);
 });
+
+
