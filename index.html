@@ -3,148 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TanzaniaJourneys - Experience Tanzania & Zanzibar</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>TechGen - Next Generation Technology</title>
+    <link rel="stylesheet" href="test.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">TanzaniaJourneys</a>
-            <div class="nav-links" id="navLinks">
-                <ul>
-                    <a href="#Home" class="active">Home</a>
-                    <a href="#tours">Tours</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#contact">Contact</a>
-                </ul>
-            </div>
-            <button class="mobile-menu" id="mobileMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <span class="hello-text">Hello</span>
+    </div>
 
-    <main>
+    <!--humberger-->
+    <div class="hamburger" id="hamburger-icon">
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+        <div class="stripe"></div>
+    </div>
+    <!-- Main Content -->
+    <div id="main-content" class="hidden">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo">TechGen</div>
+            <div class="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#work">Work</a>
+                <a href="#clients">Clients</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
         <!-- Hero Section -->
-        <section class="hero" id="Home">
+        <section id="hero" class="hero">
             <div class="hero-content">
-                <h1>Discover the Beauty of Tanzania</h1>
-                <p>Experience unforgettable adventures in Zanzibar and beyond</p>
-                <a href="/tours.html" class="cta-button">Explore Tours</a>
+                <h1>Building Tomorrow's Technology Today</h1>
+                <p>We create digital experiences that define the future</p>
             </div>
+            <div id="hero-animation" class="hero-animation"></div>
         </section>
 
-        <!-- Location Section -->
-        <section class="locations" id="tours">
-            <div class="container">
-                <h2>We Operate In</h2>
-                <div class="location-grid">
-                    <div class="location-card">
-                        <img src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6" alt="Tanzania">
-                        <div class="location-info">
-                            <h3>Tanzania Mainland</h3>
-                            <p>Experience the majestic Serengeti, climb Mount Kilimanjaro, and witness the incredible wildlife in their natural habitat.</p>
-                        </div>
+        <!-- Work Section -->
+        <section id="work" class="work">
+            <h2>What we Do</h2>
+            <div class="work-grid">
+                <div class="work-tile">
+                    <div class="work-front">
+                        <h3>Social Media Management</h3>
+                        <img src="social media.jpg" alt="Social Media">
                     </div>
-                    <div class="location-card">
-                        <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe" alt="Zanzibar">
-                        <div class="location-info">
-                            <h3>Zanzibar</h3>
-                            <p>Discover pristine beaches, historic Stone Town, and immerse yourself in the rich Swahili culture and spice traditions.</p>
-                        </div>
+                    <div class="work-back">
+                        <p>Stop wasting time on trial-and-error tactics. Let us handle your social media so you can focus on what you do best—running your business. Ready to elevate your online presence? Let's connect and transform your social media today!</p>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials">
-            <div class="container">
-                <h2>What Our Travelers Say</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330" alt="Sarah Johnson">
-                        <h3>Sarah Johnson</h3>
-                        <p>The Zanzibar tour was absolutely amazing! Our guide was knowledgeable and friendly. The beaches were pristine and the local experiences were unforgettable.</p>
+                <div class="work-tile">
+                    <div class="work-front">
+                        <h3>Web Development</h3>
+                        <img src="website.jpg" alt="website">
                     </div>
-                    <div class="testimonial-card">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Michael Chen">
-                        <h3>Michael Chen</h3>
-                        <p>Climbing Kilimanjaro with TanzaniaJourneys was a life-changing experience. The team's expertise and support made it possible to reach the summit.</p>
+                    <div class="work-back">
+                        <p>Your audience is scrolling. Your competitors are posting. Why aren’t you dominating? Let’s take your website from forgettable to unstoppable. Time to make every section count. Ready? Let’s go!</p>
                     </div>
-                    <div class="testimonial-card">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="Emma Williams">
-                        <h3>Emma Williams</h3>
-                        <p>The Serengeti safari exceeded all our expectations. We saw the big five and witnessed the great migration. Truly spectacular!</p>
+                </div>
+                <div class="work-tile">
+                    <div class="work-front">
+                        <h3>Networking</h3>
+                        <img src="server.jpg" alt="networking">
+                    </div>
+                    <div class="work-back">
+                        <p>Your network is the backbone of your business. Let’s make it stronger, smarter, and future-ready. Contact us today to take control of your infrastructure and leave network issues in the past!</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section class="blog" id="blog">
-            <div class="container">
-                <h2>Latest from Our Blog</h2>
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f" alt="Best Time to Visit Zanzibar">
-                        <div class="blog-content">
-                            <time datetime="2024-03-15">March 15, 2024</time>
-                            <h3>Best Time to Visit Zanzibar</h3>
-                            <p>Discover the perfect seasons to explore Zanzibar's pristine beaches and historic sites...</p>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </article>
-                    <article class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1534177616072-ef7dc120449d" alt="Safari Photography Tips">
-                        <div class="blog-content">
-                            <time datetime="2024-03-10">March 10, 2024</time>
-                            <h3>Safari Photography Tips</h3>
-                            <p>Expert tips for capturing stunning wildlife photos during your Tanzania safari...</p>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </article>
-                    <article class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Local Cuisine Guide">
-                        <div class="blog-content">
-                            <time datetime="2024-03-05">March 5, 2024</time>
-                            <h3>Local Cuisine Guide</h3>
-                            <p>Explore the rich flavors and spices of Tanzanian and Zanzibari cuisine...</p>
-                            <a href="#" class="read-more">Read More →</a>
-                        </div>
-                    </article>
-                </div>
+ <!-- Clients Section -->
+ <section id="clients" class="clients">
+    <h2>Our Clients</h2>
+    <div class="client-slider">
+        <div class="slider-content">
+            <div class="client">
+                <i data-lucide="building-2"></i>
+                <span>TechCorp</span>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <h3>TanzaniaJourneys</h3>
-                    <p>Experience the magic of Tanzania and Zanzibar with our expertly crafted tours.</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="/tours.html">Tours</a></li>
-                        <li><a href="/blog.html">Blog</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact" id="contact">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@tanzaniajourneys.com</p>
-                    <p>Phone: +255 123 456 789</p>
-                </div>
+            <div class="client">
+                <i data-lucide="flask-conical"></i>
+                <span>InnovateLabs</span>
+            </div>
+            <div class="client">
+                <i data-lucide="rocket"></i>
+                <span>FutureX</span>
+            </div>
+            <div class="client">
+                <i data-lucide="database"></i>
+                <span>DataFlow</span>
+            </div>
+            <div class="client">
+                <i data-lucide="cloud"></i>
+                <span>CloudNine</span>
+            </div>
+            <!-- Duplicate for infinite scroll -->
+            <div class="client">
+                <i data-lucide="building-2"></i>
+                <span>TechCorp</span>
+            </div>
+            <div class="client">
+                <i data-lucide="flask-conical"></i>
+                <span>InnovateLabs</span>
+            </div>
+            <div class="client">
+                <i data-lucide="rocket"></i>
+                <span>FutureX</span>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="main.js"></script>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <h2>How to Reach Us</h2>
+            <div class="contact-container">
+                <form id="contact-form" class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <h2>FAQ</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">What technologies do you specialize in?</div>
+                    <div class="faq-answer">We specialize in AI, blockchain, IoT, and cloud computing solutions.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How long does a typical project take?</div>
+                    <div class="faq-answer">Project timelines vary from 2-6 months depending on complexity and requirements.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer maintenance support?</div>
+                    <div class="faq-answer">Yes, we provide 24/7 maintenance support for all our solutions.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What's your pricing model?</div>
+                    <div class="faq-answer">We offer flexible pricing based on project scope and requirements.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Do you work with startups?</div>
+                    <div class="faq-answer">Yes, we love working with startups and offer special startup packages.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechGen</h3>
+                    <p>Building the future, one pixel at a time</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>hello@techgen.com</p>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#">Twitter</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="juice.js"></script>
 </body>
 </html>
